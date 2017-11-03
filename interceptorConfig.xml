@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<!-- USAGE FOR DECLEAR INTERCEPTOR STACK: 
+
+<interceptorConfig>
+	[
+	<action name="classname" >
+		<interceptor name="classname of concrete interceptor"> </interceptor>
+	</action>
+	]*
+</interceptorConfig>
+
+For example:
+
+	<interceptorConfig>
+
+		<action name="package1.class1" >
+			<interceptor name="com.interceptor.logging"> </interceptor>
+		</action>
+
+		<action name="package3.class2" >
+			<interceptor name="com.interceptor.logging"> </interceptor>
+			<interceptor name="com.interceptor.authotativeCheck"> </interceptor>
+		</action>	
+		
+	</interceptorConfig>
+-->
+	<interceptorConfig>
+
+		<action name="interceptor.frame.services.DeviceCommand" >
+			<interceptor name="interceptor.interceptors.ConcreteInterceptor_A"> </interceptor>
+		</action>
+
+		<action name="interceptor.frame.services.ThirdPartyRequest" >
+			<interceptor name="interceptor.interceptors.ConcreteInterceptor_A"> </interceptor>
+			<interceptor name="interceptor.interceptors.ConcreteInterceptor_B"> </interceptor>
+		</action>
+		
+	</interceptorConfig>
